@@ -1,0 +1,2 @@
+D:\Source\github\DesignPattern\Factory\Debug\Factory.exe
+D:\Source\github\DesignPattern\Factory\Debug\Factory.pdb
