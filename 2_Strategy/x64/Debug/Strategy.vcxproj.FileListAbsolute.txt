@@ -1,0 +1,2 @@
+D:\Source\github\DesignPattern\Strategy\x64\Debug\Strategy.exe
+D:\Source\github\DesignPattern\Strategy\x64\Debug\Strategy.pdb
