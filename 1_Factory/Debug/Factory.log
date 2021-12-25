@@ -1,3 +1,0 @@
-﻿  main.cpp
-D:\Source\github\DesignPattern\Factory\main.cpp(50,2): warning C4286: 'std::range_error': is caught by base class ('std::runtime_error') on line 46
-  Factory.vcxproj -> D:\Source\github\DesignPattern\Factory\Debug\Factory.exe
