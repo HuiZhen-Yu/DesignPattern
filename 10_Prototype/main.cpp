@@ -37,6 +37,8 @@ int main(int argc, char **argv)
     b->Display();
     c->Display();
 
+    delete a, b, c;
+
     string name;
     cin >> name;
 
