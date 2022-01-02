@@ -31,8 +31,8 @@ int main()
     c->TemplateMethod();
 #endif
     
-
-    string name;
-    cin >> name;
+    system("pause");
+    // string name;
+    // cin >> name;
     return 0; // default
 }
