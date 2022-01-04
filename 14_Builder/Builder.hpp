@@ -25,6 +25,10 @@ public:
             cout << a;
         cout << endl;
     }
+    ~Product()
+    {
+        delete parts;
+    }
 };
 
 //抽象建造者类，确定产品由两个部件PartA和PartB组成，并成名一个得到产品建造后的方法GetResult
@@ -34,6 +38,7 @@ public:
     virtual void BuildPartA() = 0;
     virtual void BuildPartB() = 0;
     virtual Product *GetResult() = 0;
+    virtual ~Builder() = default;
 };
 
 //具体的建造者

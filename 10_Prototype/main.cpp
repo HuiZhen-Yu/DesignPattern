@@ -11,16 +11,17 @@ using namespace std;
  */
 
 /*
-* 浅复制与深复制，C#中的MenberwiseClone()方法就是这样，如果字段是值类型的，则对该字段执行逐位复制，如果字段是引用类型，则复制引用但不复制引用的对象；
-* 因此原始对象及其副本引用同一对象
-* 浅复制：被复制对象的所有变量都含有与原来的的对象相同的值，而所有的对其他对象的引用都仍然指向原来的对象。
-* 深复制：把引用对象的变量指向复制过的新对象，而不是原有的被引用的对象
-*/
+ * 浅复制与深复制，C#中的MenberwiseClone()方法就是这样，如果字段是值类型的，则对该字段执行逐位复制，如果字段是引用类型，则复制引用但不复制引用的对象；
+ * 因此原始对象及其副本引用同一对象
+ * 浅复制：被复制对象的所有变量都含有与原来的的对象相同的值，而所有的对其他对象的引用都仍然指向原来的对象。
+ * 深复制：把引用对象的变量指向复制过的新对象，而不是原有的被引用的对象
+ */
 int main(int argc, char **argv)
 {
     ConcretePrototype1 *p1 = new ConcretePrototype1("I");
     ConcretePrototype1 *c1 = (ConcretePrototype1 *)p1->Clone();
     cout << "Cloned: {0}" << c1->get() << endl;
+    delete p1, c1;
 
     Resume *a = new Resume("大鸟");
     a->SetPersonalInfo("male", "29");

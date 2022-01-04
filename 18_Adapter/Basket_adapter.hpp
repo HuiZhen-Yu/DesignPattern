@@ -20,7 +20,10 @@ public:
     }
     virtual void Attack() = 0;
     virtual void Defence() = 0;
-    virtual ~Player() = default;
+    virtual ~Player()
+    {
+        
+    }
 };
 
 //Ç°·æ
@@ -38,6 +41,7 @@ public:
     {
         cout << "Ç°·æ " << name << " ·ÀÊØ" << endl;
     }
+    ~Forwards() = default;
 };
 
 //ÖÐ·æ
@@ -55,6 +59,7 @@ public:
     {
         cout << "ÖÐ·æ " << name << " ·ÀÊØ" << endl;
     }
+    ~Center() = default;
 };
 
 //ºóÎÀ
@@ -72,6 +77,7 @@ public:
     {
         cout << "ºóÎÀ " << name << " ·ÀÊØ" << endl;
     }
+    ~Guards() = default;
 };
 
 //Íâ¼®ÖÐ·æ
