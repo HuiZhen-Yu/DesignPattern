@@ -27,7 +27,12 @@ int main()
 
     id->Insert(department);
     id->GetDepartment(4);
-    delete user, factory, iu, department, factory2, id;
+    delete user;
+    delete factory;
+    delete iu;
+    delete department;
+    delete factory2;
+    delete id;
 
     system("pause");
     return 0;

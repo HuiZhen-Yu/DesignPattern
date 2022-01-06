@@ -24,7 +24,9 @@ int main()
     Player *ym = new Translater("Ò¦Ã÷");
     ym->Defence();
 
-    delete b, m, ym;
+    delete b;
+    delete m;
+    delete ym;
     system("pause");
     return 0;
 }
