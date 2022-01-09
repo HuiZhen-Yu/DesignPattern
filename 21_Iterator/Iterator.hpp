@@ -19,16 +19,18 @@ typedef int object;
 class Iterator_item
 {
 public:
-    virtual object First() = 0;
+    virtual object First() const = 0;
     virtual object Next() = 0;
-    virtual bool IsDone() = 0;
-    virtual object CurentItem() = 0;
+    virtual bool IsDone() const = 0;
+    virtual object CurentItem() const = 0;
+    virtual ~Iterator_item() = default;
 };
 
 class Aggregate
 {
 public:
     virtual Iterator_item *CreateIterator() = 0;
+    virtual ~Aggregate() = default;
 };
 
 class ConcreteIterator;
@@ -64,7 +66,7 @@ public:
         : aggregate(aggregate)
     {
     }
-    object First() override
+    object First() const override
     {
         return aggregate->operator[](0);
     }
@@ -78,11 +80,11 @@ public:
         }
         return ret;
     }
-    bool IsDone() override
+    bool IsDone() const override
     {
         return current >= aggregate->count() ? true : false;
     }
-    object CurentItem() override
+    object CurentItem() const override
     {
         return aggregate->operator[](current);
     }
